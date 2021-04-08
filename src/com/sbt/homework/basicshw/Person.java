@@ -24,7 +24,7 @@ public class Person {
      * and wife, false otherwise
      */
     public boolean marry(Person person) {
-        if (spouse.equals(person.spouse) || man == person.man) {
+        if (Objects.nonNull(spouse) && spouse.equals(person.spouse) || man == person.man) {
             return false;
         }
         if (spouse != null) {
